@@ -1,0 +1,157 @@
+/*add full-width input fields*/ 
+    input[type=text], 
+    input[type=password],input[type=tel]{ 
+        width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 2px solid #ccc; 
+        box-sizing: border-box; 
+    } 
+    /* set a style for all buttons*/ 
+    
+    #Sign
+    {   
+        background-color: green; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        cursor: pointer; 
+         
+       
+    }
+    #Signl
+    {   
+        background-color: green; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        cursor: pointer; 
+         
+       
+    }
+    #passbox 
+    {
+        height: 50px;
+        width: 200px;
+        background: Red;
+        text-align: center;
+    }
+    /*set styles for the cancel button*/ 
+     #Cancel{ 
+        padding: 14px 20px; 
+        background-color: #FF2E00; 
+        margin: 8px 0; 
+        cursor: pointer; 
+    } 
+    #Cancell{ 
+      padding: 14px 20px; 
+      background-color: #FF2E00; 
+      margin: 8px 0; 
+      cursor: pointer; 
+  } 
+    /*float cancel and signup buttons and add an equal width*/ 
+    #Cancel, 
+    #Sign,#Cancell,#Signl { 
+      width: 50%    } 
+    /*add padding to container elements*/ 
+    .container { 
+         
+        position: absolute;
+        top: 70px;
+        left: 50px;
+    } 
+    /*define the modal’s background*/ 
+    /*  
+    .modal { 
+        display: none; 
+         
+        z-index: 1; 
+        left: 0; 
+        top: 0; 
+        width: 50%; 
+        height: 50%; 
+        overflow: auto; 
+        
+        padding-top: 60px; 
+    } 
+    /*define the modal-content background*/ 
+      
+    
+    /*define the close button*/ 
+      /*
+    .close { 
+        position: absolute; 
+        right: 35px; 
+        top: 15px; 
+        color: #000; 
+        font-size: 40px; 
+        font-weight: bold; 
+    } 
+    /*define the close hover and focus effects*/ 
+     /* 
+    .close:hover, 
+    .close:focus { 
+        color: red; 
+        cursor: pointer; 
+    } 
+    */
+
+
+#slideshow {
+  position: absolute;
+  top: 53px;
+  left: 1px;  
+  overflow: hidden;
+  height: 560px;
+  width: 755px;
+  margin: 0 auto;
+  border-style: ridge;
+  border-radius: 25px;
+}
+
+.slide-wrapper {
+  width: 9000px;
+  -webkit-animation: slide 10s ease infinite;
+}
+
+.slide {
+
+  float: left;
+  height: 560px;
+  width: 755px;
+}
+
+.slide:nth-child(1) {
+  background: #D93B65;
+}
+
+.slide:nth-child(2) {
+  background: #037E8C;
+}
+
+.slide:nth-child(3) {
+  background: #36BF66;
+}
+
+.slide:nth-child(4) {
+  background: #D9D055;
+}
+
+.slide-number {
+  color: #000;
+  text-align: center;
+  font-size: 10em;
+}
+
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -755px;}
+  50% {margin-left: -755px;}
+  60% {margin-left: -1510px;}
+  70% {margin-left: -1510px;}
+  80% {margin-left: -2260px;}
+  90% {margin-left: -2260px;}
+}
+
+   

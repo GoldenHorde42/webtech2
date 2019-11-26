@@ -1,0 +1,197 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html, body {
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+html
+{
+
+background-repeat:no repeat;
+background-position:top;
+background-size:cover;
+background-attachment:fixed;
+/*border: ridge;*/
+/*border-radius: 50px;
+border-width: 5px;
+ box-shadow: 10px 10px 5px grey;*/
+
+
+}
+body
+{
+/*background-image: linear-gradient(to top, grey,darkgrey,black 40%);
+background-image-height: 100%;*/
+background: linear-gradient(to bottom, black 0%, black 20%, lightgrey 20%, lightgrey 100%);
+  background-size: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: auto;
+  white-space: nowrap;
+  width: 100%;
+
+
+}
+
+</style><title></title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" type="text/css" href="tabs.css">
+<link rel="stylesheet" type="text/css" href="input.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<LINK HREF="./CSS New project.css" REL="stylesheet">
+</head>
+<BODY >
+	<div class="border"></div>
+	<p id = "back"></p>
+<script type="text/javascript" src="tabchange.js">
+</script>
+<script type="text/javascript" src="registration.js">
+eventListen ();	
+</script>
+
+<div class="flex-container">
+<span id="li_tab7"><button class="btn1" id="link_tab7" onclick="changeTab('tab7')"><i class="fa fa-user-circle"></i> Your Profile</button></span>
+<span id="li_tab8"><button class="btn2" id="link_tab8" onclick="changeTab('tab8')"><i class="fa fa-sign-in"></i> Login</button></span>
+<span id="mode"><button class="btn3" ><i class="fa fa-moon-o" id = "mood"></i></button></span>
+<img src="div.gif" alt="Website banner" height="100" width="1150" style="overflow: hidden; position: fixed; left: 100px;">
+<div id = "mother">
+<div id="tabs">
+<ul>
+
+<li id="li_tab1" onclick="changeTab('tab1')"  ><a id ="link_tab1" style="background: lightgrey;"><i class="fa fa-home"></i>  Home</a></li>
+<li id="li_tab2" onclick="changeTab('tab2');" ><a id ="link_tab2"><i class="fa fa-sign-in"></i>Register</a></li>
+<li id="li_tab3" onclick="changeTab('tab3')"  ><a id ="link_tab3"><i class="fa fa-question"></i> Software queries</a></li>
+<li id="li_tab4" onclick="changeTab('tab4')"  ><a id ="link_tab4"><i class="fa fa-wrench"></i> Device Repair</a></li>
+<li id="li_tab5" onclick="changeTab('tab5')"  ><a id ="link_tab5"><i class="fa fa-star"></i> FAQs</a></li>
+<li id="li_tab6" onclick="changeTab('tab6')"  ><a id ="link_tab6"><i class="fa fa-instagram"></i> <i class="fa fa-facebook-official"></i> <i class="fa fa-twitter"></i> pls don't Contact us</a></li>
+
+</ul>
+
+</div>
+
+<div id="tab1">
+<div id="slideshow">
+  <div class="slide-wrapper">
+    <div class="slide"><h1 class="slide-number"><img src="man.jpg" alt="Website banner" height="560" width="1510" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man1.jpg" alt="Website banner" height="560" width="1510" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man2.jfif" alt="Website banner" height="560" width="1510" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man3.jpg" alt="Website banner" height="560" width="1510" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man.jpg" alt="Website banner" height="560" width="1510" style="position: relative; left:0px; top: -100px;"></h1></div>
+  </div>
+</div>
+
+</div>
+
+<div id="tab2" style="display: none;">
+        <form class="modal-content animate" method ="POST" action = "signup.php" id = "myForm"> 
+            <div class="container"> 
+                <label><b>Email</b></label> 
+                <input type="text" placeholder="Enter Email" id = "email" name="email" onfocus = "autofill()" required>
+                <label><br><b>Password</b></label> 
+                <input type="password" id = "pwd" placeholder="Enter Password" name="pswfirst" required oninput="checkPassStrength(this.value);"> 
+        
+                <label><br><b>Repeat Password</b></label> 
+                <input type="password" id = "repeatpwd" oninput ="passmatch()" placeholder="Repeat Password" name="psw-repeat"  required disabled> 
+
+                <label><br><b>Enter Mobile Number</b></label> 
+                <input type = "tel" placeholder = "Mobile Number" id = "no" name = "phonenumber" required >
+
+                <label><br><b>Remember me</b></label> 
+                <input type="checkbox" id = "remember" onclick = "WriteCookie()">
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
+                <div id = "passbox">  Too Weak </div>
+                <div class="clearfix"> 
+                    <button type="button" id = "Cancel" onclick="changeTab('tab1')"  class="cancelbtn">Cancel</button> 
+                    <button type="submit" id = "Sign" class="signupbtn">Sign Up</button> 
+                </div> 
+            </div> 
+        </form> 
+     <!--</div> -->
+</div>
+
+<div id="tab3" style="display: none;">
+  <div style="position:absolute; top: 25px">
+  <h2>Enter queries regarding your devices</h2>
+<h4>Note: You will be able to ask or answer questions once you have logged in to this website.</h4>
+<form name="confirmationForm">
+    <textarea id="confirmationText" class="text" cols="86" rows ="3" name="confirmationText" placeholder="Enter your question. Please try to check for similar questions before asking yours."></textarea>
+  
+    <BR>
+   <input type="submit" value="submit" class="submitButton">
+   <BR>
+</form> 
+<form name = "searchform">
+  <textarea id="confirmationText1" class="text" cols="86" rows ="3" name="confirmationText1" placeholder ="Search for similar queries" ></textarea> 
+  <BR>
+  <input type="submit" value="submit" class="submitButton">
+  <BR>
+</div>
+<div id="tabs1">
+<ul>
+
+<li id="li_taba" onclick="changeTab1('taba')"  ><a id ="link_taba" style="background: lightgrey;"><i class="fa fa-quora"></i>  Relevance</a></li>
+<li id="li_tabb" onclick="changeTab1('tabb');" ><a id ="link_tabb"><i class="fa fa-angle-double-up"></i> Top </a></li>
+<li id="li_tabc" onclick="changeTab1('tabc')"  ><a id ="link_tabc"><i class="fa fa-caret-down"></i> Oldest</a></li>
+<li id="li_tabd" onclick="changeTab1('tabd')"  ><a id ="link_tabd"><i class="fa fa-caret-up"></i> Newest</a></li>
+
+
+</ul>
+
+<div id="taba" style="display: block;">
+
+</div>
+<div id="tabb" style="display: none;">
+
+</div>
+<div id="tabc" style="display: none;">
+
+</div>
+<div id="tabd" style="display: none;">
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<div id="tab4" style="display: none;">
+
+</div>
+<div id="tab5" style="display: none;">
+
+</div>
+<div id="tab6" style="display: none;">
+
+</div>
+<div id="tab7" style="display: none;">
+
+</div>
+<div id="tab8" style="display: none;">
+  <form class="modal-content animate"> 
+    <div class="container"> 
+        <label><b>Email</b></label> 
+        <input type="text" placeholder="Enter Email" id = "emaill" name="email" onfocus = "autofill()" required>
+        <label><br><b>Password</b></label> 
+        <input type="password" id = "pwdl" placeholder="Enter Password" name="pswfirst" required oninput="checkPassStrength(this.value);">
+    </div>
+    <div class="clearfix"> 
+      <button type="button" id = "Cancell" onclick="changeTab('tab1')"  class="cancelbtn">Cancel</button> 
+      <button type="submit" id = "Signl" class="signupbtn">Sign Up</button> 
+  </div>
+  </form>
+</div>
+
+
+</div>
+</div>
+
+</BODY>
+</HTML>

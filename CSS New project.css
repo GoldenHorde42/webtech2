@@ -1,0 +1,52 @@
+myheader {
+    font-family: oldstyle;
+    font-size: 42;
+    font-weight: bold;
+    color: #0000FF;
+}
+
+smallheader {
+    font-family: oldstyle;
+    font-size: 27;
+    font-weight: bold;
+    color: #FF00FF;
+}
+
+presenting {
+    font-family: oldstyle;
+    font-size: 24;
+    font-weight: bold;
+}
+
+runningtext {
+    marquee-style: alternate;
+    marquee-play-count: 100;
+    marquee-direction: forward;
+    marquee-speed: normal;
+    font-family: oldstyle;
+    font-size: 27;
+    font-weight: bold;
+    font-color: #00FF00;
+    overflow-style: auto;
+}
+
+myblinker {
+    font-family: oldstyle;
+    font-size: 27;
+    font-color: red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+triptitle {
+    font-family: oldstyle;
+    font-size: 27;
+    font-color: #00FF00;
+    font-weight: bold;
+}
+
+tripbody {
+    font-family: oldstyle;
+    font-size: 23;
+    font-color: Blue;
+}

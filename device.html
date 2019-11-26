@@ -1,0 +1,233 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html, body {
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+html
+{
+
+background-repeat:no repeat;
+background-position:top;
+background-size:cover;
+background-attachment:fixed;
+/*border: ridge;*/
+/*border-radius: 50px;
+border-width: 5px;
+ box-shadow: 10px 10px 5px grey;*/
+
+
+}
+body
+{
+/*background-image: linear-gradient(to top, grey,darkgrey,black 40%);
+background-image-height: 100%;*/
+background: linear-gradient(to bottom, black 0%, black 20%, lightgrey 20%, lightgrey 100%);
+  background-size: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: auto;
+  white-space: nowrap;
+  width: 100%;
+
+
+}
+
+</style><title></title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" type="text/css" href="tabs.css">
+<link rel="stylesheet" type="text/css" href="input.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<LINK HREF="./CSS New project.css" REL="stylesheet">
+</head>
+<BODY >
+	<div class="border"></div>
+	<p id = "back"></p>
+<script type="text/javascript" src="tabchange.js">
+</script>
+<script type="text/javascript" src="registration.js">
+eventListen ();	
+</script>
+
+
+<span id="li_tab7"><button class="btn1" id="link_tab7" style = "position : fixed" onclick="changeTab('tab7')"><i class="fa fa-user-circle"></i> Your Profile</button></span>
+
+
+<img src="div.gif" alt="Website banner" height="100" width="1150" style="overflow: hidden; position: fixed; left: 100px; z-index: 2;">
+<div id = "mother">
+<div id="tabs" style = "position:fixed; z-index: 1;";>
+<ul>
+
+<li id="li_tab1" onclick="changeTab('tab1')"  ><a id ="link_tab1" style="background: lightgrey;"><i class="fa fa-home"></i>  Home</a></li>
+<li id="li_tab2" onclick="changeTab('tab2');" ><a id ="link_tab2"><i class="fa fa-sign-in"></i>Register</a></li>
+<li id="li_tab3" onclick="changeTab('tab3')"  ><a id ="link_tab3"><i class="fa fa-question"></i> Software queries</a></li>
+
+<li id="li_tab5" onclick="changeTab('tab5')"  ><a id ="link_tab5"><i class="fa fa-star"></i> FAQs</a></li>
+<li id="li_tab6" onclick="changeTab('tab6')"  ><a id ="link_tab6"><i class="fa fa-instagram"></i> <i class="fa fa-facebook-official"></i> <i class="fa fa-twitter"></i> Contact us</a></li>
+
+</ul>
+
+</div>
+<div id = "windows" style = "position:absolute; top:130px; z-index: 0">
+<div id="tab1">
+<div id="slideshow">
+  <div class="slide-wrapper">
+    <div class="slide"><h1 class="slide-number"><img src="man.jpg" alt="Website banner" height="560" width="755" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man1.jpg" alt="Website banner" height="560" width="755" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man2.jfif" alt="Website banner" height="560" width="755" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man3.jpg" alt="Website banner" height="560" width="755" style="position: relative; left:0px; top: -100px;"></h1></div>
+    <div class="slide"><h1 class="slide-number"><img src="man.jpg" alt="Website banner" height="560" width="755" style="position: relative; left:0px; top: -100px;"></h1></div>
+  </div>
+</div>
+<div id = "form" style = "position: absolute; left : 800px; top:20px;">
+<form class="modal-content animate"> 
+    <div class="container"> 
+        <label><b>Email</b></label> 
+        <input type="text" placeholder="Enter Email" id = "emaill" name="emaill" onfocus  = "autofilll();" required>
+        <label><br><b>Password</b></label> 
+        <input type="password" id = "pwdl" placeholder="Enter Password" name="pswfirstl" required>
+        <label><br><b>Remember me</b></label> 
+        
+        <input type="checkbox" id = "rememberl" onclick = "WriteCookiel();";>
+        <br>
+     
+        <button type="button" id = "Cancell" onclick="changeTab('tab1')"  class="cancelbtn">Cancel</button> 
+        <button type="button" id = "Signl" class="signupbtn" onclick = "loginuser();">Login</button> 
+  </div>
+  </form>
+</div> 
+</div>
+
+<div id="tab2" style="display: none;">
+        <form class="modal-content animate"> 
+            <div class="container"> 
+                <label><b>Email</b></label> 
+                <input type="text" placeholder="Enter Email" id = "email" name="email" required>
+                <label><br><b>Password</b></label> 
+                <input type="password" id = "pwd" placeholder="Enter Password" name="pswfirst" required oninput="checkPassStrength(this.value);"> 
+        
+                <label><br><b>Repeat Password</b></label> 
+                <input type="password" id = "repeatpwd" placeholder="Repeat Password" name="psw-repeat"  required disabled> 
+
+                <label><br><b>Enter Mobile Number</b></label> 
+                <input type = "tel" placeholder = "Mobile Number" id = "no" name = "phonenumber" required >
+
+                <label><br><b>Remember me</b></label> 
+                <input type="checkbox" id = "remember" onclick = "WriteCookie()">
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
+                <div id = "passbox">  Too Weak </div>
+                <div class="clearfix"> 
+                    <button type="button" id = "Cancel" onclick="changeTab('tab1')"  class="cancelbtn">Cancel</button> 
+                    <button type="button" value="submit" id = "Sign" class="signupbtn" onclick = "registerUser();">Sign Up</button> 
+                </div> 
+                <div id = "result">
+                    <br>
+                </div>
+            </div> 
+        </form> 
+     <!--</div> -->
+</div>
+
+<div id="tab3" style="display: none;">
+  <div style="position:absolute; top: 25px">
+  <h2>Enter queries regarding your devices</h2>
+<div id = "Notice1" style = "display:block;">
+<h4>Note: You will be able to ask or answer questions once you have logged in to this website.</h4>
+</div>
+<form name="confirmationForm" id = "cform">
+    <textarea id="confirmationText" class="text" cols="86" rows ="3" name="confirmationText" disabled = true placeholder="Enter your question. Please try to check for similar questions before asking yours."></textarea>
+  
+    <BR>
+   <button type="button" class="signupbtn" style = "width:70px; height:20px;"onclick = "postQ();"> Submit</button>
+   <BR>
+</form> 
+<div>
+<form name = "searchform">
+  <textarea id="confirmationText1" class="text" cols="86" rows ="3" name="confirmationText1" placeholder ="Search for keywords" ></textarea> 
+  <BR>
+    <button type="button" class="signupbtn" style = "width:70px; height:20px;"onclick = "searchQ();"> Submit</button>
+  <BR>
+</div>
+  </div>
+<div id="tabs1">
+<ul>
+
+<li id="li_taba" onclick="changeTab1('taba')"  ><a id ="link_taba" style="background: lightgrey;"><i class="fa fa-quora"></i>  Relevance</a></li>
+<li id="li_tabb" onclick="changeTab1('tabb');" ><a id ="link_tabb"><i class="fa fa-angle-double-up"></i> Top </a></li>
+<li id="li_tabc" onclick="changeTab1('tabc')"  ><a id ="link_tabc"><i class="fa fa-caret-down"></i> Oldest</a></li>
+<li id="li_tabd" onclick="changeTab1('tabd')"  ><a id ="link_tabd"><i class="fa fa-caret-up"></i> Newest</a></li>
+
+
+</ul>
+
+<div id="taba" style="display: block;">
+
+</div>
+<div id="tabb" style="display: none;">
+
+</div>
+<div id="tabc" style="display: none;">
+
+</div>
+<div id="tabd" style="display: none;">
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<div id="tab5" style="display: none; position:absolute; top:100px;">
+
+ 
+    <h1>F.A.Q.</h1>
+    <br/>
+    <p><b>Do you guys provide hardware services?</b></p>
+    <p>- Yes. We do provide hardware services.You will have to contact our agents and they will visit you. The contact details are provided on the contact us page..</p>
+    <p><b>Is it possible to find questions which were asked years ago?</b></p>
+    <p> - Yes just sort the questions by "Oldest" to find questions which were asked in the pasy</p>
+    <p><b>How does this website work?</b></p>
+    <p> - We have a forum where other users discuss about solutions to repair. However it is up to you entirely, as these users are not certified experts and we will not be responsible for what you do to try to fix your gadget.</p>
+    <p><b>My phone still doesn't work even after following what was said in the forum.</b></p>
+    <p> - As mentioned above, it is up to you entirely to decide if you want to fix it by yourself, as these users are not certified experts and we will not be responsible for what you do to try to fix your gadget.</p>
+ 
+
+
+
+
+
+</div>
+<div id="tab6" style="display: none;">
+  <div style="font-family: verdana; color:darkgreen">
+    <h1>Follow us on our social media to be notified about discounts or to ask for further queries.</h1>
+    <h4>
+    <br> Instagram: <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+    <br> Facebook: <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+    <br> Twitter: <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+    <br> Reddit: <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+    </h4>
+  </div>
+</div>
+<div id="tab7" style="display: none; position: absolute;top:200px  ;">
+ <p>
+     Your profile information will be displayed here after you log in.
+ </p>   
+
+</div>
+
+
+</div>
+</div>
+
+
+</BODY>
+</HTML>
